@@ -1,0 +1,17 @@
+{
+    "name": "ethers_examples",
+    "version": "1.0.0",
+    "description": "Minimal Tutorial to Ethers.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "0xAA",
+    "license": "MIT",
+    "dependencies": {
+        "@flashbots/ethers-provider-bundle": "^0.6.2",
+        "ethers": "^6.15.0",
+        "merkletreejs": "^0.3.11",
+        "ora": "^8.2.0"
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "example03-web3js-erc20",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.2",
+    "chai": "^4.2.0",
+    "dotenv": "^10.0.0",
+    "ethereumjs-tx": "^2.1.2",
+    "ethers": "^6.15.0",
+    "mocha": "^4.1.0",
+    "openzeppelin": "^1.0.0",
+    "solc": "^0.8.27",
+    "web3": "^1.3.5"
+  }
+}
