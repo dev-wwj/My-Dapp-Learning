@@ -7,7 +7,7 @@ const INFURA_SEPOLIA_URL = "https://sepolia.infura.io/v3/"
 
 const provider = new ethers.JsonRpcProvider(`${INFURA_SEPOLIA_URL}${INFURA_KEY}`)
 
-const privateKey = "44260ec9dfa3b14add9de1009719e718bf143e68c65eeaa46c695947379d4b03"
+const privateKey = "2623d562d11c382ac5db8d1e9e4fcdfb3a980abec9c67ded2b2b84c01ec61c0d"
 const wallet = new ethers.Wallet(privateKey, provider)
 
 const abiWTEH = [
@@ -50,9 +50,12 @@ const main = async () => {
         const balanceWETH_deposit = await contractWETH.balanceOf(address)
         console.log(`存款后WETH持仓: ${ethers.formatEther(balanceWETH_deposit)}\n`)
 
-        console.log("\n3. 调用transfer()函数，给vitalik转账0.0001 WETH")
-        const tx2 = await contractWETH.transfer("vitalik.eth", ethers.parseEther("0.0001"))
+        // console.log("\n3. 调用transfer()函数，给vitalik转账0.0001 WETH")
+        // const tx2 = await contractWETH.transfer("vitalik.eth", ethers.parseEther("0.0001"))
         
+        console.log("\n3. 调用transfer()函数，给861F转账0.0001 WETH")
+        const tx2 = await contractWETH.transfer("0x5d2C2B81D9396b1B3E0969DA6B82b35f8Bca861F", ethers.parseEther("0.0001"))
+
         spinner.start()
         await tx2.wait()
         spinner.succeed('交易完成')
@@ -63,9 +66,8 @@ const main = async () => {
         const balanceWETH_transfer = await contractWETH.balanceOf(address)
         console.log(`转账后WETH持仓: ${ethers.formatEther(balanceWETH_transfer)}`)
     } else {
-        console.log("ETH不足，去水龙头领一些Goerli ETH")
+        console.log("ETH不足，去水龙头领一些Sepolia ETH")
     }
-    
 }
 
 main()
