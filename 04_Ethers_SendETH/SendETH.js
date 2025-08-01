@@ -1,21 +1,16 @@
 import { ethers, HDNodeWallet, Mnemonic } from "ethers";
+import { provider, wallet } from "../00_Ethers_Base/Base";
 
-const INFURA_KEY = "988d604435204d0d816284fdcec4b98d"
-
-const INFURA_SEPOLIA_URL = `https://sepolia.infura.io/v3/${INFURA_KEY}`
-
-const provider = new ethers.JsonRpcProvider(INFURA_SEPOLIA_URL);
+const provider = provider;
 
 const wallet1 = ethers.Wallet.createRandom()
 
 const wallet1WithProvider = wallet1.connect(provider)
 
 // Create Wallet From PrivateKey
-const privateKey = '2623d562d11c382ac5db8d1e9e4fcdfb3a980abec9c67ded2b2b84c01ec61c0d'
-const wallet2 = new ethers.Wallet(privateKey, provider)
+const wallet2 = wallet
 
-//device view scrub enjoy pitch theory prefer order salute blur attract erupt
-const phrase = 'device view scrub enjoy pitch theory prefer order salute blur attract erupt'
+const phrase = 'device view scrub ...'
 // Create Wallet From Phrase
 const mnemonic = Mnemonic.fromPhrase(phrase, "")
 

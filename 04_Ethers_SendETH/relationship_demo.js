@@ -1,7 +1,7 @@
 import { ethers, HDNodeWallet, Mnemonic } from "ethers";
 
 // 1. 助记词 (种子)
-const phrase = 'device view scrub enjoy pitch theory prefer order salute blur attract erupt'
+const phrase = 'device view scrub ...'
 console.log("=== 1. 助记词 ===")
 console.log(`助记词: ${phrase}`)
 console.log(`单词数量: ${phrase.split(' ').length}`)

@@ -1,14 +1,10 @@
 import { ethers } from "ethers"
-
-const INFURA_KEY = "988d604435204d0d816284fdcec4b98d"
+import { provider } from "../00_Ethers_Base/Base.js"
 
 const address = "0xE80cA1838EA28d921fb7E1bb12b5DE9D5E474425"
 
-const INFURA_MAINNET_URL = `https://mainnet.infura.io/v3/${INFURA_KEY}`
-const INFURA_SEPOLIA_URL = `https://sepolia.infura.io/v3/${INFURA_KEY}`
-
 // const providerMainnet = new ethers.JsonRpcProvider(INFURA_MAINNET_URL)
-const providerSepolia = new ethers.JsonRpcProvider(INFURA_SEPOLIA_URL)
+const providerSepolia = provider
 
 const main = async () => {
     

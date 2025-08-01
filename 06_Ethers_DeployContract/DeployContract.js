@@ -7,18 +7,15 @@
 // 其中args为合约构造函数的参数
 
 import { ethers } from "ethers";
+import { provider, wallet } from "../00_Ethers_Base/Base";
 
 // 利用Alchemy的rpc节点连接以太坊网络
 // 准备 alchemy API 可以参考https://github.com/AmazingAng/WTFSolidity/blob/main/Topics/Tools/TOOL04_Alchemy/readme.md 
-const INFURA_KEY = "988d604435204d0d816284fdcec4b98d"
 
-const INFURA_SEPOLIA_URL = "https://sepolia.infura.io/v3/"
-
-const provider = new ethers.JsonRpcProvider(`${INFURA_SEPOLIA_URL}${INFURA_KEY}`)
+const provider = provider
 
 // 利用私钥和provider创建wallet对象
-const privateKey = '44260ec9dfa3b14add9de1009719e718bf143e68c65eeaa46c695947379d4b03'
-const wallet = new ethers.Wallet(privateKey, provider)
+const wallet = wallet
 
 // ERC20的人类可读abi
 const abiERC20 = [

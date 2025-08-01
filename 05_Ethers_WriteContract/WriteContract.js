@@ -1,14 +1,10 @@
 import { ethers } from "ethers"
 import ora from 'ora' 
+import { provider, wallet } from "../00_Ethers_Base/Base"
 
-const INFURA_KEY = "988d604435204d0d816284fdcec4b98d"
+const provider = provider
 
-const INFURA_SEPOLIA_URL = "https://sepolia.infura.io/v3/"
-
-const provider = new ethers.JsonRpcProvider(`${INFURA_SEPOLIA_URL}${INFURA_KEY}`)
-
-const privateKey = "2623d562d11c382ac5db8d1e9e4fcdfb3a980abec9c67ded2b2b84c01ec61c0d"
-const wallet = new ethers.Wallet(privateKey, provider)
+const wallet = wallet
 
 const abiWTEH = [
     "function balanceOf(address) public view returns(uint)",
